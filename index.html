@@ -3,17 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Flores Amarillas</title>
+    <!-- Integración de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- Enlace al archivo CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Reproductor de audio -->
+    <audio id="background-music" controls>
+        <source src="audio/Coldplay - Yellow(Sub Español Lyrics).mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
     <h1>Te quiero mucho Nita</h1>
+    
+    <!-- Contenedor de las flores -->
     <div class="flower-container">
         <!-- Flor mediana (izquierda) -->
         <div class="flower flower-medium">
             <div class="stem"></div>
             <div class="leaf leaf-left"></div>
             <div class="leaf leaf-right"></div>
-            <div class="petal petal-top"></div>
+            <!-- Pétalos -->
             <div class="petal petal-left"></div>
             <div class="petal petal-right"></div>
             <div class="center"></div>
@@ -23,7 +34,7 @@
             <div class="stem"></div>
             <div class="leaf leaf-left"></div>
             <div class="leaf leaf-right"></div>
-            <div class="petal petal-top"></div>
+            <!-- Pétalos -->
             <div class="petal petal-left"></div>
             <div class="petal petal-right"></div>
             <div class="center"></div>
@@ -33,11 +44,44 @@
             <div class="stem"></div>
             <div class="leaf leaf-left"></div>
             <div class="leaf leaf-right"></div>
-            <div class="petal petal-top"></div>
+            <!-- Pétalos -->
+            <div class="petal petal-left"></div>
+            <div class="petal petal-right"></div>
+            <div class="center"></div>
+        </div>
+        <!-- Nueva flor grande -->
+        <div class="flower flower-extra-large">
+            <div class="stem"></div>
+            <div class="leaf leaf-left"></div>
+            <div class="leaf leaf-right"></div>
+            <!-- Pétalos -->
+            <div class="petal petal-left"></div>
+            <div class="petal petal-right"></div>
+            <div class="center"></div>
+        </div>
+        <!-- Nueva flor mediana-pequeña -->
+        <div class="flower flower-medium-small">
+            <div class="stem"></div>
+            <div class="leaf leaf-left"></div>
+            <div class="leaf leaf-right"></div>
+            <!-- Pétalos -->
             <div class="petal petal-left"></div>
             <div class="petal petal-right"></div>
             <div class="center"></div>
         </div>
     </div>
+
+    <!-- Césped en la parte inferior -->
+    <div class="grass"></div>
+
+    <!-- Textos inspiradores -->
+    <div class="inspirational-text">
+        <p>"La belleza está en los pequeños detalles"</p>
+        <p>"Cada flor tiene su momento para florecer"</p>
+    </div>
+
+    <!-- Insectos animados -->
+    <div class="insect butterfly"></div>
+    <div class="insect bee"></div>
 </body>
 </html>

@@ -1,14 +1,18 @@
+/* Fuente personalizada */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 body {
     margin: 0;
     padding: 0;
-    background-color: #000000; /* Fondo negro */
+    /* Fondo degradado de amanecer/atardecer */
+    background: linear-gradient(to top, #ff9a9e 0%, #fad0c4 100%);
     overflow: hidden;
 }
 
 h1 {
     color: #ffd700; /* Amarillo dorado */
-    font-family: Arial, sans-serif;
-    font-size: 2rem;
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
     margin-top: 20px;
@@ -23,6 +27,7 @@ h1 {
     align-items: flex-end;
 }
 
+/* Estilos de las flores */
 .flower {
     position: relative;
     transform-origin: bottom center;
@@ -31,47 +36,66 @@ h1 {
 }
 
 .flower-large {
-    height: 200px;
+    height: 300px;
     animation-delay: 0s;
 }
 
 .flower-medium {
-    height: 160px;
+    height: 240px;
     animation-delay: 1s;
 }
 
 .flower-small {
-    height: 120px;
+    height: 180px;
     animation-delay: 2s;
 }
 
+.flower-extra-large {
+    height: 350px;
+    animation-delay: 0.5s;
+}
+
+.flower-medium-small {
+    height: 200px;
+    animation-delay: 1.5s;
+}
+
+/* Tallo */
 .stem {
     position: absolute;
     bottom: 0;
     left: 50%;
-    width: 5px;
-    background-color: #4CAF50; /* Verde */
+    width: 8px;
+    background-color: #4CAF50;
     transform: translateX(-50%);
 }
 
 .flower-large .stem {
-    height: 100px;
+    height: 150px;
 }
 
 .flower-medium .stem {
-    height: 80px;
+    height: 120px;
 }
 
 .flower-small .stem {
-    height: 60px;
+    height: 90px;
+}
+
+.flower-extra-large .stem {
+    height: 180px;
+}
+
+.flower-medium-small .stem {
+    height: 100px;
 }
 
 /* Hojas */
 .leaf {
     position: absolute;
-    width: 30px;
-    height: 15px;
-    background-color: #228B22; /* Verde más oscuro */
+    width: 45px;
+    height: 22px;
+    background-color: #228B22;
     border-radius: 50% 50% 50% 50%;
 }
 
@@ -88,30 +112,32 @@ h1 {
 }
 
 .flower-large .leaf {
-    bottom: 50px;
+    bottom: 75px;
 }
 
 .flower-medium .leaf {
-    bottom: 40px;
+    bottom: 60px;
 }
 
 .flower-small .leaf {
-    bottom: 30px;
+    bottom: 45px;
+}
+
+.flower-extra-large .leaf {
+    bottom: 90px;
+}
+
+.flower-medium-small .leaf {
+    bottom: 50px;
 }
 
 /* Pétalos */
 .petal {
     position: absolute;
-    background-color: #FFD700; /* Amarillo dorado */
+    background-color: #FFD700;
     border-radius: 50%;
     animation: breathe 4s infinite ease-in-out;
     transform-origin: center;
-}
-
-.petal-top {
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .petal-left {
@@ -127,24 +153,34 @@ h1 {
 }
 
 .flower-large .petal {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
 }
 
 .flower-medium .petal {
+    width: 45px;
+    height: 45px;
+}
+
+.flower-small .petal {
     width: 30px;
     height: 30px;
 }
 
-.flower-small .petal {
-    width: 20px;
-    height: 20px;
+.flower-extra-large .petal {
+    width: 70px;
+    height: 70px;
+}
+
+.flower-medium-small .petal {
+    width: 35px;
+    height: 35px;
 }
 
 /* Centro de la flor */
 .center {
     position: absolute;
-    background-color: #FFA500; /* Naranja */
+    background-color: #FFA500;
     border-radius: 50%;
     top: 50%;
     left: 50%;
@@ -152,21 +188,31 @@ h1 {
 }
 
 .flower-large .center {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 }
 
 .flower-medium .center {
+    width: 22px;
+    height: 22px;
+}
+
+.flower-small .center {
     width: 15px;
     height: 15px;
 }
 
-.flower-small .center {
-    width: 10px;
-    height: 10px;
+.flower-extra-large .center {
+    width: 35px;
+    height: 35px;
 }
 
-/* Animaciones */
+.flower-medium-small .center {
+    width: 18px;
+    height: 18px;
+}
+
+/* Animaciones de las flores */
 @keyframes sway {
     0% {
         transform: rotate(0deg);
@@ -195,4 +241,93 @@ h1 {
     100% {
         transform: translate(-50%, -50%) scale(0.9);
     }
+}
+
+/* Efectos al pasar el mouse sobre las flores */
+.flower:hover .petal {
+    background-color: #FFC107;
+}
+
+.flower:hover .center {
+    background-color: #FF5722;
+}
+
+/* Césped */
+.grass {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #228B22, transparent);
+}
+
+/* Textos inspiradores */
+.inspirational-text {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5rem;
+    animation: fadeInText 3s ease-in-out;
+}
+
+.inspirational-text p {
+    margin: 10px 0;
+}
+
+.inspirational-text p:hover {
+    color: #FFD700;
+    cursor: pointer;
+}
+
+@keyframes fadeInText {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Insectos animados */
+.insect {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.butterfly {
+    background-image: url('butterfly.png'); /* Reemplaza con la ruta correcta */
+    animation-name: flyButterfly;
+}
+
+.bee {
+    background-image: url('bee.png'); /* Reemplaza con la ruta correcta */
+    animation-name: flyBee;
+}
+
+@keyframes flyButterfly {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(100px, -50px); }
+    50% { transform: translate(200px, 0); }
+    75% { transform: translate(100px, 50px); }
+    100% { transform: translate(0, 0); }
+}
+
+@keyframes flyBee {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-100px, 50px); }
+    50% { transform: translate(-200px, 0); }
+    75% { transform: translate(-100px, -50px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Mostrar controles del reproductor */
+audio {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
 }
