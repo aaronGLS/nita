@@ -1,0 +1,198 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Fondo negro */
+    overflow: hidden;
+}
+
+h1 {
+    color: #ffd700; /* Amarillo dorado */
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.flower-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 80px); /* Altura total menos el título */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.flower {
+    position: relative;
+    transform-origin: bottom center;
+    animation: sway 5s infinite ease-in-out;
+    margin: 0 20px; /* Separación entre flores */
+}
+
+.flower-large {
+    height: 200px;
+    animation-delay: 0s;
+}
+
+.flower-medium {
+    height: 160px;
+    animation-delay: 1s;
+}
+
+.flower-small {
+    height: 120px;
+    animation-delay: 2s;
+}
+
+.stem {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 5px;
+    background-color: #4CAF50; /* Verde */
+    transform: translateX(-50%);
+}
+
+.flower-large .stem {
+    height: 100px;
+}
+
+.flower-medium .stem {
+    height: 80px;
+}
+
+.flower-small .stem {
+    height: 60px;
+}
+
+/* Hojas */
+.leaf {
+    position: absolute;
+    width: 30px;
+    height: 15px;
+    background-color: #228B22; /* Verde más oscuro */
+    border-radius: 50% 50% 50% 50%;
+}
+
+.leaf-left {
+    left: 50%;
+    transform-origin: right center;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.leaf-right {
+    left: 50%;
+    transform-origin: left center;
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+.flower-large .leaf {
+    bottom: 50px;
+}
+
+.flower-medium .leaf {
+    bottom: 40px;
+}
+
+.flower-small .leaf {
+    bottom: 30px;
+}
+
+/* Pétalos */
+.petal {
+    position: absolute;
+    background-color: #FFD700; /* Amarillo dorado */
+    border-radius: 50%;
+    animation: breathe 4s infinite ease-in-out;
+    transform-origin: center;
+}
+
+.petal-top {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.petal-left {
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+}
+
+.petal-right {
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.flower-large .petal {
+    width: 40px;
+    height: 40px;
+}
+
+.flower-medium .petal {
+    width: 30px;
+    height: 30px;
+}
+
+.flower-small .petal {
+    width: 20px;
+    height: 20px;
+}
+
+/* Centro de la flor */
+.center {
+    position: absolute;
+    background-color: #FFA500; /* Naranja */
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.flower-large .center {
+    width: 20px;
+    height: 20px;
+}
+
+.flower-medium .center {
+    width: 15px;
+    height: 15px;
+}
+
+.flower-small .center {
+    width: 10px;
+    height: 10px;
+}
+
+/* Animaciones */
+@keyframes sway {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(3deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-3deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes breathe {
+    0% {
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+}
